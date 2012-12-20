@@ -3,7 +3,7 @@ connect-rt [![Build Status](https://secure.travis-ci.org/fengmk2/connect-rt.png)
 
 ![logo](https://raw.github.com/fengmk2/connect-rt/master/logo.png)
 
-Description
+connect response time middleware, include micro second.
 
 * jscoverage: [100%](http://fengmk2.github.com/coverage/connect-rt.html)
 
