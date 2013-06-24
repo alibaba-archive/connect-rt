@@ -1,11 +1,9 @@
-connect-rt [![Build Status](https://secure.travis-ci.org/fengmk2/connect-rt.png)](http://travis-ci.org/fengmk2/connect-rt)
+connect-rt [![Build Status](https://secure.travis-ci.org/fengmk2/connect-rt.png)](http://travis-ci.org/fengmk2/connect-rt) [![Coverage Status](https://coveralls.io/repos/fengmk2/connect-rt/badge.png)](https://coveralls.io/r/fengmk2/connect-rt)
 =======
 
 ![logo](https://raw.github.com/fengmk2/connect-rt/master/logo.png)
 
 connect response time middleware, include micro second.
-
-* jscoverage: [100%](http://fengmk2.github.com/coverage/connect-rt.html)
 
 ## Install
 
@@ -45,7 +43,7 @@ Fastest is Date.now()
 
 (The MIT License)
 
-Copyright (c) 2012 fengmk2 &lt;fengmk2@gmail.com&gt;
+Copyright (c) 2012 - 2013 fengmk2 &lt;fengmk2@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
