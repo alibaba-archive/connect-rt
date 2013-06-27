@@ -29,7 +29,21 @@ describe('connect-rt.test.js', function () {
   it('should contain X-Response-time', function (done) {
     request(app)
     .get('/foo')
-    .expect('X-Response-time', /\d{1,3}\.\d{1,3}ms/)
+    .expect('X-Response-time', /^\d+$/)
+    .expect(200, done);
+  });
+
+  var app2 = connect(
+    rt({headerName: 'X-ReadTime'}),
+    function (req, res, next) {
+      res.end(req.url);
+    }
+  );
+
+  it('should contain X-Response-time', function (done) {
+    request(app2)
+    .get('/foo')
+    .expect('X-ReadTime', /^\d+$/)
     .expect(200, done);
   });
 

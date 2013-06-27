@@ -9,7 +9,7 @@
     "travis-cov": { "threshold": 100 }
   },
   "dependencies": {
-    "microtime": ">=0.3.3"
+    "microtime": ">=0.4.0"
   },
   "devDependencies": {
     "connect": "*",

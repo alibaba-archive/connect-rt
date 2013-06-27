@@ -19,6 +19,7 @@ var rt = require('connect-rt');
 
 var app = connect(
   rt(),
+  // rt({headerName: 'X-ReadTime'}), // you can change the header name
   function (req, res, next) {
     res.end('hello world');
   }
@@ -36,6 +37,7 @@ Date.now() x 4,290,064 ops/sec ±3.71% (84 runs sampled)
 microtime.now() x 2,613,316 ops/sec ±3.58% (89 runs sampled)
 process.uptime() x 311,993 ops/sec ±3.29% (84 runs sampled)
 process.hrtime() x 678,040 ops/sec ±2.89% (89 runs sampled)
+
 Fastest is Date.now()
 ```
 
