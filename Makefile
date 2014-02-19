@@ -4,26 +4,29 @@ TIMEOUT = 2500
 MOCHA_OPTS =
 
 install:
-	@npm install
+	@npm install --registry=http://r.cnpmjs.org --disturl=http://dist.u.qiniudn.com
 
 test: install
-	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
+	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--reporter $(REPORTER) \
 		--timeout $(TIMEOUT) \
 		$(MOCHA_OPTS) \
 		$(TESTS)
 
 test-cov:
-	@rm -f coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
-	@ls -lh coverage.html
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov | ./node_modules/.bin/cov
 
 test-coveralls:
 	@$(MAKE) test
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=mocha-lcov-reporter | ./node_modules/.bin/coveralls
 
 test-all: test test-cov
 
-.PHONY: install test test-cov test-all test-coveralls
+autod: install
+	@./node_modules/.bin/autod -w
+
+contributors: install
+	@./node_modules/.bin/contributors -f plain -o AUTHORS
+
+.PHONY: test

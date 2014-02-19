@@ -1,6 +1,6 @@
 /*!
  * connect-rt - test/connect-rt.test.js
- * Copyright(c) 2012 fengmk2 <fengmk2@gmail.com>
+ * Copyright(c) 2012 - 2014 fengmk2 <fengmk2@gmail.com>
  * MIT Licensed
  */
 
@@ -10,10 +10,10 @@
  * Module dependencies.
  */
 
-var rt = require('../');
 var should = require('should');
 var connect = require('connect');
 var request = require('supertest');
+var rt = require('../');
 
 describe('connect-rt.test.js', function () {
   var app = connect(
@@ -40,7 +40,7 @@ describe('connect-rt.test.js', function () {
     }
   );
 
-  it('should contain X-Response-time', function (done) {
+  it('should contain custom header: X-ReadTime', function (done) {
     request(app2)
     .get('/foo')
     .expect('X-ReadTime', /^\d+$/)

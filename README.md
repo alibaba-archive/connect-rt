@@ -31,7 +31,7 @@ var app = connect(
 Please see https://gist.github.com/4345606
 
 ```bash
-$ node timer.js 
+$ node timer.js
 
 Date.now() x 4,290,064 ops/sec ±3.71% (84 runs sampled)
 microtime.now() x 2,613,316 ops/sec ±3.58% (89 runs sampled)
@@ -41,11 +41,11 @@ process.hrtime() x 678,040 ops/sec ±2.89% (89 runs sampled)
 Fastest is Date.now()
 ```
 
-## License 
+## License
 
 (The MIT License)
 
-Copyright (c) 2012 - 2013 fengmk2 &lt;fengmk2@gmail.com&gt;
+Copyright (c) 2012 - 2014 fengmk2 &lt;fengmk2@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
