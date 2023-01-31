@@ -1,3 +1,10 @@
+## 归档说明
+ 由于该项目及社区已长期不活跃，阿里巴巴集团决定不再维护并归档该项目。我们不建议您继续使用这个项目，以避免因为版本过时而造成的潜在风险。如果您有兴趣接手并维护该项目，可以 fork 一份并联系 opensource@alibaba-inc.com，我们会将您 fork 的仓库地址公示在这里，以指引潜在的社区贡献者。
+
+## Archive Notice
+This project community has been inactive for a long while, Alibaba Group has made the difficult decision to stop driving this project and will archive this repository. Since no more new versions will be released, we suggest you stop using this project. If you would like to take over maintaining this project, please fork this repository and contact opensource@alibaba-inc.com, we will add a link to your forked project here so that potential community developers would know. 
+
+
 connect-rt [![Build Status](https://secure.travis-ci.org/fengmk2/connect-rt.png)](http://travis-ci.org/fengmk2/connect-rt) [![Coverage Status](https://coveralls.io/repos/fengmk2/connect-rt/badge.png)](https://coveralls.io/r/fengmk2/connect-rt)
 =======
 
